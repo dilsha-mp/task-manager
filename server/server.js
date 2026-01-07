@@ -9,7 +9,10 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://task-manager-six-amber-92.vercel.app",
+  credentials: true
+}));
 
 app.use(express.json());
 
